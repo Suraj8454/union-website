@@ -87,7 +87,7 @@ const Home2 = () => {
           <button
             className="px-6 py-2 font-medium text-white transition bg-red-500 rounded-md shadow-md hover:bg-red-900 hover:shadow-black"
           >
-            Member Login
+            Member Loginn
           </button></Link>
         </div>
       </div>
