@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar2 from './Navbar2';
-import Footer from '../Footer';
+import Footer2 from './Footer2';
 
 
 const Contact2 = () => {
@@ -9,7 +9,7 @@ const Contact2 = () => {
    <Navbar2/>
     <div className="container p-6 mx-auto bg-white lg:pt-8 ">
        
-      {/* Header */}
+      {/* top */}
       <div className="my-5 text-center lg:my-10">
         <h1 className="text-4xl font-semibold text-gray-800">Contact Us</h1>
       </div>
@@ -40,7 +40,7 @@ const Contact2 = () => {
           </form>
         </div>
 
-        {/* Contact Details & Google Map */}
+        {/* Contact Details */}
         <div className="mt-8 space-y-5 lg:w-1/2 lg:mt-0">
           {/* Address */}
           <div>
@@ -66,7 +66,7 @@ const Contact2 = () => {
         </div>
       </div>
     </div>
-    <Footer/>
+   <Footer2/>
     </>
   );
 };

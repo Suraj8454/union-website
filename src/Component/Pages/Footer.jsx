@@ -1,6 +1,4 @@
 
-
-
 import { Facebook, Instagram, Mail, MapIcon, PhoneCall, Twitter, Youtube } from 'lucide-react';
 import React from 'react';
 
@@ -12,7 +10,7 @@ const Footer = () => {
             <div className="container px-6 mx-auto">
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-x-10">
 
-                    {/* Company Info */}
+                    {/* Company Info and logo*/}
                     <div className="text-center md:text-left ">
                         <img
                             src="./image/Picture1.jpg"
@@ -25,7 +23,7 @@ const Footer = () => {
 
                     </div>
 
-                    {/* Quick Links */}
+                    {/* Quick links detail*/}
                     <div>
                         <h3 className="mb-4 text-xl font-semibold text-center md:text-left ">Quick Links</h3>
                         <ul className="space-y-2">
@@ -37,7 +35,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Social Media */}
+                    {/* Social media */}
                     <div>
                         <h3 className="mb-4 text-xl font-semibold text-center md:text-left">Follow Us</h3>
                         <div className="flex justify-center space-x-4 md:justify-start">
@@ -56,7 +54,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Contact Info */}
+                    {/* Contact info */}
                     <div className='gap-y-4'>
                         <h3 className="mb-4 text-xl font-semibold text-center md:text-left">Contact Us</h3>
                         <ul>
@@ -77,7 +75,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            {/* Footer Bottom */}
+            {/* copy right*/}
             <div className="py-4 mt-8 text-sm text-center bg-gray-900">
                 <p>&copy; {new Date().getFullYear()} Union Website. All rights reserved.</p>
             </div>

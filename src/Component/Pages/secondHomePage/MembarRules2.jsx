@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar2 from './Navbar2'
 import Footer from '../Footer'
+import Footer2 from './Footer2'
 
 
 export default function MemberRules2() {
@@ -14,7 +15,7 @@ export default function MemberRules2() {
           className="object-fill w-full h-full lg:h-2/3 lg:w-2/4"
         />
       </div>
-      <Footer />
+      <Footer2/>
     </>
   )
 }

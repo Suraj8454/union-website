@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 
-// src/components/Card.js
 export const Card = ({ title, imgSrc, link }) => {
     return (
         <div className="transition-all duration-500 transform bg-white rounded-lg shadow-md cursor-pointer hover:scale-110 lg:w-64 lg:h-58 hover:shadow-2xl">

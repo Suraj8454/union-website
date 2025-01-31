@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { ReactTyped } from 'react-typed'
-import Navbar from './New';
+import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
 
@@ -17,16 +17,16 @@ const CarouselComponent = () => {
 
   const [currentImage, setCurrentImage] = useState(0);
 
-  // Automatic carousel (change image every 3 seconds)
+  // Auto change 5 sec
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);
     }, 5000);
 
-    return () => clearInterval(interval); // Clean up the interval on component unmount
+    return () => clearInterval(interval);
   }, [images.length]);
 
-  // Next and Previous Image Functions
+  // Next and Previous button
   const nextImage = () => {
     setCurrentImage((prev) => (prev + 1) % images.length);
   };
@@ -42,7 +42,7 @@ const CarouselComponent = () => {
         alt={`carousel ${currentImage}`}
         className="w-screen transition-all duration-1000 ease-linear delay-700 object-fit h-60 lg:h-80"
       />
-      {/* Carousel Navigation Buttons at the Bottom */}
+      {/* Carousel Bottom */}
       <div className="absolute left-0 right-0 flex justify-between px-4 bottom-4">
         <button
           onClick={prevImage}
@@ -61,15 +61,14 @@ const CarouselComponent = () => {
   );
 };
 
-const Home2 = () => {
+const Home = () => {
   const [setlogin,setSetlogin]=useState(false);
   
   return (
     <>
-    <Navbar/>
-    
+    <Navbar/> 
     <div className="flex flex-col w-full min-h-full mt-8 bg-gray-100 lg:flex-row md:mt-14 lg:mt-16">
-      {/* Left Side - Details with Two Buttons */}
+      {/* Left Side - Details  */}
       <div className="flex flex-col items-start justify-center p-8 space-y-4 bg-white lg:w-1/2">
           <img
             src={'./image/dada.jpg'}
@@ -81,9 +80,8 @@ const Home2 = () => {
         <p className="mb-6 text-lg">
           This is the union website for get union card and renew in this website so is so usefull for production employeee.
         </p>
-        {/*<h1><ReactTyped strings={["FROM ME","hii"]} typeSpeed={100} backSpeed={150} loop /></h1>*/}
         <div className="flex space-x-4">
-          <Link to={"/login"}>
+          <Link to={"/registerlogin"}>
           <button
             className="px-6 py-2 font-medium text-white transition bg-red-500 rounded-md shadow-md hover:bg-red-900 hover:shadow-black"
           >
@@ -92,7 +90,7 @@ const Home2 = () => {
         </div>
       </div>
 
-      {/* Right Side - Automatic Carousel with Next/Previous Buttons bg-gray-50*/}
+      {/* Right Side - Auto Carousel */}
       <div className="flex items-center justify-center p-8 bg-white lg:w-1/2">
         <CarouselComponent />
       </div>
@@ -103,4 +101,4 @@ const Home2 = () => {
   );
 };
 
-export default Home2;
+export default Home;

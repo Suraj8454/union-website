@@ -1,3 +1,4 @@
+import { House } from 'lucide-react';
 import React, { useState } from 'react';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 
@@ -25,10 +26,10 @@ function Login() {
     return (
         <div className="flex items-center justify-center min-h-screen bg-cover" style={{ backgroundImage: 'url("./image/blurimage.jpg")' }} >
             <div className="flex flex-col w-5/6 max-w-screen-xl lg:flex-row">
-                {/* Left Side (Details or Image Section) */}
+                {/* Left Side  */}
                 <div className="mt-16 lg:flex lg:flex-1">
 
-                    {/* You can replace this image with your own content */}
+                    {/* image section */}
                     <div className="flex flex-col items-center justify-center px-8 py-12 text-white">
                         <div className='relative flex items-center justify-center mt-4 mb-3 w-60'>
                             <img
@@ -44,10 +45,17 @@ function Login() {
                         </div>
                         <h1 className="text-2xl font-bold lg:text-4xl">Mazdoor Login Page</h1>
                         <p className="mt-4 text-lg">welcome back to the login page...</p>
+                        <div className='mt-6'>
+                            <Link to={'/home'}
+                                className="rounded-md bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600 flex gap-x-2 hover:shadow-lg"
+                            >
+                                Back to Home <span><House size={20} /></span>
+                            </Link>
+                        </div>
                     </div>
                 </div>
 
-                {/* Right Side (Login Form) */}
+                {/* Right Side login detail */}
                 <div className="flex-1 p-8 m-4 mb-10 bg-white shadow-lg rounded-3xl lg:m-16">
                     <h2 className="mb-6 text-3xl font-semibold text-center">Login</h2>
                     <form className="space-y-4">

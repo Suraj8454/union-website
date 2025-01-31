@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './New';
+import Navbar from './Navbar';
 import Footer from './Footer';
 
 const Contact = () => {
@@ -8,7 +8,7 @@ const Contact = () => {
     <Navbar/>
     <div className="container p-6 mx-auto bg-white lg:pt-8 ">
        
-      {/* Header */}
+      {/* top*/}
       <div className="my-5 text-center lg:my-10">
         <h1 className="text-4xl font-semibold text-gray-800">Contact Us</h1>
       </div>
@@ -18,7 +18,7 @@ const Contact = () => {
         {/* Contact Form */}
         <div className="space-y-4 lg:w-1/2">
           <h2 className="text-2xl font-semibold text-gray-800">Write us</h2>
-          <form className="space-y-4">
+          <form className="space-y-4" >
             <div>
               <label className="block text-lg font-medium text-gray-700">Full Name</label>
               <input type="text" className="w-full p-3 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-red-400" placeholder="Your Name" />
@@ -39,7 +39,7 @@ const Contact = () => {
           </form>
         </div>
 
-        {/* Contact Details & Google Map */}
+        {/* Contact Details */}
         <div className="mt-8 space-y-5 lg:w-1/2 lg:mt-0">
           {/* Address */}
           <div>

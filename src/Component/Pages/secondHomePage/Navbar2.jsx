@@ -18,7 +18,7 @@ const Navbar2 = () => {
                 <nav className="pt-1 pb-4 text-xs text-white bg-red-600 shadow-md lg:text-base">
                     <div className="flex flex-col items-center justify-between mx-auto max-w-7xl">
                         {/*top section */}
-                        <div className="flex flex-col items-center justify-between hidden p-2 space-x-8 text-white md:flex-row md:flex place-self-end"  >
+                        <div className="flex-col items-center justify-between hidden p-2 space-x-8 text-white lg:flex md:flex-row md:flex place-self-end"  >
                             <div className="flex items-center space-x-6">
                                 <a href="tel:+91 8655884111" className="flex items-center hover:text-gray-200">
                                     <Phone className="mr-2 md:size-4 lg:size-5" />
@@ -47,12 +47,14 @@ const Navbar2 = () => {
                         {/*bottom section */}
                         <div className="hidden space-x-5 font-semibold md:flex ">
 
-
+                          {/* logo */}
+                           <Link to={'/SecondHomePage'}>
                             <img
                                 src={'./image/Picture1.jpg'}
                                 alt={"logo"}
                                 className='absolute object-cover w-20 h-20 rounded-full shadow-md cursor-pointer top-5 left-5 md:top-5 md:left-5'
                             />
+                            </Link>
 
                             {/*home*/}
                             <Link to={"/SecondHomePage"} className="hover:text-gray-300 md:mt-1 lg:mt-0">Home</Link>
@@ -60,7 +62,7 @@ const Navbar2 = () => {
                             {/*about*/}
                             <div className="relative group">
                                 <div className='flex flex-row hover:text-gray-300'>
-                                    <button className="rounded-md ">About</button>
+                                    <button className="rounded-md ">Office-Bearers</button>
                                     <ChevronDown />
                                 </div>
 
@@ -68,8 +70,8 @@ const Navbar2 = () => {
                                     <div className='flex items-center justify-center mt-2'>
                                         <ChevronUp color='red' />
                                     </div>
-                                    <a href="#" className="block px-2 py-1 font-normal hover:bg-red-600 hover:text-white ">Current Member</a>
-                                    <a href="#" className="block px-2 py-1 font-normal hover:bg-red-600 hover:text-white">Previous Member</a>
+                                    <Link to={'/current2'} className="block px-2 py-1 font-normal hover:bg-red-600 hover:text-white ">Current Bearers</Link>
+                                    <Link to={'/previous2'} className="block px-2 py-1 font-normal hover:bg-red-600 hover:text-white">Previous Bearers</Link>
                                 </div>
                             </div>
                             {/*rules & regulation*/}
@@ -127,16 +129,17 @@ const Navbar2 = () => {
                                 />
                             </svg>
                         </button>
-
+                        <Link to={'/SecondHomePage'}>
                         <img
                             src={'./image/Picture1.jpg'}
                             alt={"logo"}
                             className='absolute z-30 object-cover w-16 h-16 rounded-full shadow-md top-3 left-5 lg:top-5 lg:left-5 md:top-5 lg:h-20 lg:w-20 md:h-20 md:w-20'
                         />
+                        </Link>
                     </div>
                 </nav>
 
-                {/* Mobile Menu (Toggleable) */}
+                {/* Mobile Menu  */}
                 {isMobileMenuOpen && (
                     <div className="relative h-screen pt-16 space-y-20 text-center text-white bg-gray-800 md:hidden">
                         <div className="flex flex-col p-4 space-y-6">
@@ -144,7 +147,7 @@ const Navbar2 = () => {
                             {/* about */}
                             <div className='flex flex-col items-center justify-center group'>
                                 <div className='flex flex-row hover:text-gray-300'>
-                                    <button className="rounded-md ">About</button>
+                                    <button className="rounded-md ">Office Bearers</button>
                                     <ChevronDown />
                                 </div>
                                 <div className='flex hidden w-48 text-white group-hover:block '>
@@ -152,8 +155,8 @@ const Navbar2 = () => {
                                         <ChevronUp />
                                     </div>
                                     <div className='flex flex-col p-2 text-black bg-white rounded-sm'>
-                                    <a href="#" className="block px-2 py-1 font-normal hover:bg-red-600 hover:text-white">Current Member</a>
-                                    <a href="#" className="block px-2 py-1 font-normal hover:bg-red-600 hover:text-white">previous Member</a>
+                                    <Link to={'/current2'} className="block px-2 py-1 font-normal hover:bg-red-600 hover:text-white">Current Bearers</Link>
+                                    <Link to={'/previous2'} className="block px-2 py-1 font-normal hover:bg-red-600 hover:text-white">previous Bearers</Link>
                                     </div>
 
                                 </div>
@@ -236,11 +239,13 @@ const Navbar2 = () => {
 
 
             <div className='z-0 left-9 lg:top-3'>
+                <Link to={'/SecondHomePage'}>
                 <img
                     src={'./image/dada.jpg'}
                     alt={"logo"}
                     className='object-cover w-10 h-10 rounded-full left-5'
                 />
+                </Link>
             </div>
 
         </div>

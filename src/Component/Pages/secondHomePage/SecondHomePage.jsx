@@ -1,12 +1,11 @@
-// src/App.js
+
 import React from "react";
 import { Card } from "./Card";
-import Navbar from "../New";
 import Navbar2 from "./Navbar2";
 import Footer from "../Footer";
+import Footer2 from "./Footer2";
 
 function SecondHomePage() {
-    // Example data for the cards
     const cardData = [
         {
             title: "Mediclaim",
@@ -65,7 +64,7 @@ function SecondHomePage() {
                     ))}
                 </div>
             </div>
-            <Footer/>
+           <Footer2/>
         </>
     );
 }
